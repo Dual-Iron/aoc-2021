@@ -1,6 +1,2 @@
-# User-specific files
-*.user
-
-# Build results
-[Bb]in/
-[Oo]bj/
+# Rust build results
+target/
