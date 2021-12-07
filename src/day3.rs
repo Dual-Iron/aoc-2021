@@ -55,14 +55,14 @@ pub fn part2() {
     }
 
     // Parse numbers from input
-    let numbers: Vec<u16> = include_str!("../input/day3.txt")
+    let mut numbers: Vec<u16> = include_str!("../input/day3.txt")
         .lines()
         .map(|l| u16::from_str_radix(l, 2).unwrap())
         .collect();
     
     // Get ratings and multiply them together
     let o2_rating = get_rating(&mut numbers.clone(), true);
-    let co2_rating = get_rating(&mut numbers.clone(), false);
+    let co2_rating = get_rating(&mut numbers, false);
     let answer = o2_rating as u32 * co2_rating as u32;
 
     println!("{answer}");
