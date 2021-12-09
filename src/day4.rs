@@ -104,5 +104,4 @@ pub fn part2() {
     }
 
     println!("{last_score}");
-    return;
 }
