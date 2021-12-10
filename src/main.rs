@@ -1,8 +1,8 @@
 #![feature(format_args_capture)]
 
-mod day5;
+mod day6;
 
 fn main() {
-    day5::part1();
-    day5::part2();
+    day6::part1();
+    day6::part2();
 }
