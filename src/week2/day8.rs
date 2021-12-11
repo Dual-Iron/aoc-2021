@@ -52,11 +52,12 @@ fn get_solved(line: &str, displays: &mut [u8; 10]) {
     let mut scrambled = get_display_flags(line.split_at(58).0);
     scrambled.sort_unstable_by_key(|b| nonzero_count(*b));
 
-    // We know these
+    // These values are given
     displays[1] = scrambled[0];
     displays[4] = scrambled[2];
     displays[7] = scrambled[1];
     displays[8] = scrambled[9];
+    // Derive displays of length 5...
     for d in &scrambled[3..6] {
         if d & displays[1] == displays[1] {
             // If the digit has both segs from 1, it's 1.
@@ -69,7 +70,7 @@ fn get_solved(line: &str, displays: &mut [u8; 10]) {
             displays[2] = *d;
         }
     }
-    // Derive these displays from mixing and matching segments
+    // Derive displays 6 and 9 from mixing and matching previous displays
     displays[6] = displays[5] | (displays[8] & !displays[1]);
     displays[9] = displays[5] | displays[1];
     // 0 is whatever's left
