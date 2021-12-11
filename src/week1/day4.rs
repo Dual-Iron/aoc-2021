@@ -65,7 +65,7 @@ fn get_draws(lines: &mut std::str::Lines) -> Vec<u16> {
 
 // 82440
 pub fn part1() {
-    let mut lines = include_str!("../input/day4.txt").lines();
+    let mut lines = crate::input!(4).lines();
 
     let draws = get_draws(&mut lines);
     let mut boards = BingoBoard::parse_boards(lines);
@@ -85,7 +85,7 @@ pub fn part1() {
 
 // 20774
 pub fn part2() {
-    let mut lines = include_str!("../input/day4.txt").lines();
+    let mut lines = crate::input!(4).lines();
 
     let draws = get_draws(&mut lines);
     let mut boards = BingoBoard::parse_boards(lines);

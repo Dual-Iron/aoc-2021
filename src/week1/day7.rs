@@ -3,7 +3,7 @@
 
 // 356922
 pub fn part1() {
-    let mut positions: Vec<i32> = include_str!("../input/day7.txt").trim_end().split(',').map(|s| s.parse().expect("number")).collect();
+    let mut positions: Vec<i32> = crate::input!(7).trim_end().split(',').map(|s| s.parse().expect("number")).collect();
 
     positions.sort_unstable();
 
@@ -23,7 +23,7 @@ pub fn part2() {
         acc
     }
 
-    let mut positions: Vec<i32> = include_str!("../input/day7.txt").trim_end().split(',').map(|s| s.parse().expect("number")).collect();
+    let mut positions: Vec<i32> = crate::input!(7).trim_end().split(',').map(|s| s.parse().expect("number")).collect();
 
     positions.sort_unstable();
 

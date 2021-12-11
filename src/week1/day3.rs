@@ -3,7 +3,7 @@ pub fn part1() {
     let mut zeros_by_column = [0u32; 12];
     let mut rows = 0;
 
-    for line in include_str!("../input/day3.txt").lines() {
+    for line in crate::input!(3).lines() {
         for (i, char) in line.bytes().enumerate() {
             if char == b'0' {
                 zeros_by_column[i] += 1;
@@ -55,7 +55,7 @@ pub fn part2() {
     }
 
     // Parse numbers from input
-    let mut numbers: Vec<u16> = include_str!("../input/day3.txt")
+    let mut numbers: Vec<u16> = crate::input!(3)
         .lines()
         .map(|l| u16::from_str_radix(l, 2).unwrap())
         .collect();

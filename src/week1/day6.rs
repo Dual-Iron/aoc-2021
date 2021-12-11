@@ -13,7 +13,7 @@ fn sim_days(days: u16) {
     let mut fish_by_timer = [0u64; 10];
     
     // Get initial conditions
-    for substr in include_str!("../input/day6.txt").trim_end().split(",") {
+    for substr in crate::input!(6).trim_end().split(",") {
         fish_by_timer[substr.parse::<usize>().expect("number")] += 1;
     }
 

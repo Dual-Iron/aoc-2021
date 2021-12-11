@@ -23,7 +23,7 @@ fn get_lines() -> Vec<Line> {
     let regex = Regex::new(r"(\d+),(\d+) -> (\d+),(\d+)").expect("valid regex");
     let mut vec = Vec::with_capacity(256);
 
-    for line in include_str!("../input/day5.txt").lines() {
+    for line in crate::input!(5).lines() {
         for capture in regex.captures(line) {
             vec.push(Line {
                 x1: capture[1].parse().unwrap(),
