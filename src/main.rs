@@ -1,12 +1,12 @@
 #![feature(format_args_capture)]
 
 fn main() {
-    week2::day13::part1();
-    week2::day13::part2();
+    week2::day14::part1();
+    week2::day14::part2();
 }
 
 mod week2 {
-    pub mod day13;
+    pub mod day14;
 }
 
 macro_rules! input {
