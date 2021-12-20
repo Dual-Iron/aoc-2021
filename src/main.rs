@@ -1,10 +1,10 @@
 fn main() {
-    week2::day15::part1();
-    week2::day15::part2();
+    week2::day16::part1();
+    week2::day16::part2();
 }
 
 mod week2 {
-    pub mod day15;
+    pub mod day16;
 }
 
 macro_rules! input {
