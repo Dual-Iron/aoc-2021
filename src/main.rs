@@ -1,9 +1,9 @@
 fn main() {
-    week2::day17::part1();
-    week2::day17::part2();
+    week3::day17::part1();
+    week3::day17::part2();
 }
 
-mod week2 {
+mod week3 {
     pub mod day17;
 }
 
